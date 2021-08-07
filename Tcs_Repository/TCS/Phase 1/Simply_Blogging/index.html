@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Simply Bloging</title>
+    <style>
+        div .row {
+            margin-top: 10px;
+        }
+        div.border {
+            border-radius: 10px;
+            border-width: 15px;
+        }
+        #rowBlog {
+            height: 600px;
+            width: auto;
+            
+        }
+
+        #colDiv {
+            
+            border-style: solid;
+            text-align: center;
+           
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+            
+
+        }
+        
+        #blogArticle {
+            position: absolute;
+            height: 200px;
+            width: 100px;
+            margin: auto;
+            
+        }
+        #article{
+            height: 50px;
+        }
+        
+        #colDiv::-webkit-scrollbar {
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body class="bg-dark d-flex justify-content-center" onload="initBlog()" >
+    <div class="container-fluid bg-dark text-white">
+        <div  class="border border-light">
+            <nav class = "nav justify-content-center">
+                <ul class="nav justify-content-center">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Add Blog</a>
+                    </li>
+                    <li class="navbar-item ">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item active">
+                        <a href="#" class="nav-link">About Us</a>
+                    </li>
+                    <li class="navbar-item ">
+                        <a href="#" class="nav-link">Contacts</a>
+                    </li>
+                                 
+                </ul>
+            </nav>
+        </div>
+        <div class="d-flex justify-content-center">
+            <form action="" method="get" class= "form-group"  >
+                <div class="row">
+                    <div class="col-8">
+                        <label class = "lable">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="title" id="title" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label class = "lable">Article</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--div class="col-12">
+                        <input type="text" name="article" id="article" class="form-control">
+                    </div-->
+                        <textarea name="article" id="article" cols="30" rows="10" class="form-control" ></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for= "image" class = "lable" id="url">Add Image Url</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <input type="text" name="image" id="image" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        
+                        <!--add image area-->
+                        <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Fcheetah.org%2Fcanada%2F2020%2F06%2F22%2Ffor-cheetahs-speed-is-important-but-so-is-eyesight%2F&psig=AOvVaw3cRLkH1NJRn9OF7k2G62-i&ust=1628389583713000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCKCDpYfunfICFQAAAAAdAAAAABAE-->
+                        <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Fcheetah.org%2F&psig=AOvVaw3cRLkH1NJRn9OF7k2G62-i&ust=1628389583713000&source=images&cd=vfe&ved=2ahUKEwi-peiG7p3yAhV5qHIEHbBGDJAQjRx6BAgAEAo-->
+                        <!--https://images.hindustantimes.com/img/2021/05/21/550x309/a473acd0-ba63-11eb-8bbb-7340b389f1f5_1621622570537.jpg-->
+                        <input type="button" value="Add Blog" class="btn btn-light" onclick="getBlog()">
+                    </div>
+                </div>
+
+                
+            </form>
+        </div>
+        <div class="d-flex justify-content-center" id= "blog">
+            <div class="row d-flex justify-content-center" id="rowBlog">
+
+            </div>
+            
+        </div>
+    </div>
+     
+    <script src="blog.js">
+        
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
