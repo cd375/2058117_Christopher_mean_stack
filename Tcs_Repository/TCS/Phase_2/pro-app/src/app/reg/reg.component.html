@@ -1,0 +1,49 @@
+
+<div>
+    <div *ngIf = "changeStat()" >
+        <p>Register For The Portfolio Profile </p>
+
+        <form [formGroup] = "regForm" (ngSubmit) = "collectLocalInfo()">
+            <div>
+                <label for="firstName">First Name</label>
+            </div>
+            <div>
+                <input type="text" name="firstName" formControlName = "firstName" >
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+            </div>
+            <div>
+                <input type="text" name="lastName" formControlName = "lastName">
+            </div>
+            <div>
+                <label for="userName">User Name</label>
+            </div>
+            <div>
+                <input type="text" name="userName" formControlName = "userName">
+            </div>
+            <div>
+                <label for="passNew">Password</label>
+            </div>
+            <div>
+                <input type="password" name="passNew" formControlName = "passNew">
+            </div>
+            <div>
+                <label for="passCon">Password Confirm</label>
+            </div>
+            <div>
+                <input type="password" name="passCon" formControlName = "passCon">
+            </div>
+            
+            <div>
+                <input type="submit" value="Register"  name="regUser" >
+                
+            </div>
+            
+        </form>
+        
+    
+    </div>
+    
+</div>
+

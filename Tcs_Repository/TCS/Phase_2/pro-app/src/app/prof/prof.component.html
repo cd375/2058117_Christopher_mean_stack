@@ -1,0 +1,42 @@
+<div >
+
+    <div *ngIf = "changeStat()">
+        <p>Welcome to your contacts {{showMyName()}}</p>
+
+        <form class="form-group" [formGroup] = "profFrm" (ngSubmit)= "setContact()">
+            <div>
+                <label for="conName">Contact Name</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="conName" formControlName="conName">
+            </div>
+            <div>
+                <label  for="conPhone">Phone Number</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="conPhone" formControlName="conPhone">
+            </div>
+            <div>
+                <input class="btn-primary" type="submit" name="createCon" id="createCon" value="Create">
+            </div>
+        </form>
+        
+        <form class="form-group">
+            <input class="btn btn-secondary" type="submit" name="conDets" id="conDets" value="contact details" (click)= "toggleTable()">
+            
+        </form>
+        <table class="table" *ngIf = "varHide">
+            <tr>
+                <th>Contact</th>
+                <th>Number</th>
+            </tr>
+            <tr *ngFor = "let tab of showMyContacts()">
+                <td>{{tab.conName}}</td>
+                <td>{{tab.conPhone}}</td>
+            </tr>
+        </table>
+        <input type="button" value="Logout" (click)= "logOutBtn()">
+       
+    </div>
+</div>
+

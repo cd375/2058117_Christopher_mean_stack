@@ -1,0 +1,27 @@
+
+<div >
+
+    <div *ngIf = "changeStat()">
+        <p>Login Here</p>
+        <form [formGroup] = "loginFrm" (ngSubmit)="loginCon()">
+            <div>
+                <label for="userLog">User Name</label>
+            </div>
+            <div>
+                <input type="text" name="userLog" formControlName="userLog">
+            </div>
+            <div>
+                <label for="passLog">Password</label>
+            </div>
+            <div>
+                <input type="password" name="passLog" formControlName="passLog">
+            </div>
+            <div>
+                <input type="submit" value="Login"name="loginUser" id="loginUser">
+            </div>
+        </form>
+        
+  
+     </div>
+</div>
+
