@@ -1,0 +1,92 @@
+[
+    {
+        "qNumber":"1", 
+        "question":"What is the name for the Jewish New Year?",
+         "AnsA": "Hanukkah",
+         "AnsB": "Yom Kippur",
+         "AnsC": "Kwanza",
+         "AnsD": "Rosh Hashanah",
+         "RightAns": "Rosh Hashanah"
+    },
+    {
+        "qNumber":"2", 
+        "question":"How many blue stripes are there on the U.S. flag?",
+         "AnsA": "6",
+         "AnsB": "7",
+         "AnsC": "13",
+         "AnsD": "0",
+         "RightAns": "0"
+    },
+    {
+        "qNumber":"3", 
+        "question":"Which one of these characters is not friends with Harry Potter?",
+         "AnsA": "Ron Weasley",
+         "AnsB": "Neville Longbottom",
+         "AnsC": "Draco Malfoy",
+         "AnsD": "Hermione Granger",
+         "RightAns": "Draco Malfoy"
+    },
+    {
+        "qNumber":"4", 
+        "question":"What is the color of Donald Duck’s bowtie?",
+         "AnsA": "Red",
+         "AnsB": "Yellow",
+         "AnsC": "Blue",
+         "AnsD": "White",
+         "RightAns": "Red"
+    },
+    {
+        "qNumber":"5", 
+        "question":"What was the name of the band Lionel Richie was a part of?",
+         "AnsA": "King Harvest",
+         "AnsB": "Spectrums",
+         "AnsC": "Commodores",
+         "AnsD": "The Marshall Tucker Band",
+         "RightAns": "Commodores"
+    },
+    {
+        "qNumber":"6", 
+        "question":"Which animal does not appear in the Chinese zodiac?",
+         "AnsA": "Dragon",
+         "AnsB": "Rabbit",
+         "AnsC": " Dog",
+         "AnsD": "Hummingbird",
+         "RightAns": "Hummingbird"
+    },
+    {
+        "qNumber":"7", 
+        "question":"Which country held the 2016 Summer Olympics?",
+         "AnsA": "China",
+         "AnsB": " Ireland",
+         "AnsC": "Brazil",
+         "AnsD": "Italy",
+         "RightAns": "Brazil"
+    },
+    {
+        "qNumber":"8", 
+        "question":"Which planet is the hottest?",
+         "AnsA": "Venus",
+         "AnsB": "Saturn",
+         "AnsC": "Mercury",
+         "AnsD": "Mars",
+         "RightAns": "Venus"
+    },
+    {
+        "qNumber":"9", 
+        "question":"Who was the only U.S. President to resign?",
+         "AnsA": "Herbert Hoover",
+         "AnsB": "Richard Nixon",
+         "AnsC": "George W. Bush",
+         "AnsD": "Barack Obama",
+         "RightAns": "Richard Nixon"
+    },
+    {
+        "qNumber":"10", 
+        "question":"What does the “D” in “D-Day” stand for?",
+         "AnsA": "Dooms",
+         "AnsB": "Dark",
+         "AnsC": " Day",
+         "AnsD": "Dunkirk",
+         "RightAns": "Day"
+    }
+]

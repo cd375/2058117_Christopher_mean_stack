@@ -1,0 +1,128 @@
+
+<div>
+    
+   
+    <form  [formGroup]="myQuiz" class="me" >
+        <div>
+             <p>{{disTestArray[0].qNumber}}  {{disTestArray[0].question}}</p>
+            <mat-radio-group  formControlName = "q1Ans">
+                <mat-radio-button value="Q1A" >{{disTestArray[0].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q1B">{{disTestArray[0].AnsB}}</mat-radio-button> <br> 
+                <mat-radio-button value="Q1C">{{disTestArray[0].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q1D">{{disTestArray[0].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+        </div>
+
+        <div>
+            <p>{{disTestArray[1].qNumber}}  {{disTestArray[1].question}}</p>
+
+            <mat-radio-group formControlName = "q2Ans">
+                <mat-radio-button value="Q2A">{{disTestArray[1].AnsA}}</mat-radio-button>  <br>
+                <mat-radio-button value="Q2B">{{disTestArray[1].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q2C">{{disTestArray[1].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q2D">{{disTestArray[1].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+
+        </div>
+        <div>
+            <p>{{disTestArray[2].qNumber}}  {{disTestArray[2].question}}</p>
+
+            <mat-radio-group formControlName = "q3Ans">
+                <mat-radio-button value="Q3A">{{disTestArray[2].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q3B">{{disTestArray[2].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q3C">{{disTestArray[2].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q3D">{{disTestArray[2].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+        </div>
+        <div>
+            <p>{{disTestArray[3].qNumber}}  {{disTestArray[3].question}}</p>
+
+            <mat-radio-group formControlName = "q4Ans">
+                <mat-radio-button value="Q4A">{{disTestArray[3].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q4B">{{disTestArray[3].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q4C">{{disTestArray[3].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q4D">{{disTestArray[3].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+        </div>
+        <div>
+            <p>{{disTestArray[4].qNumber}}  {{disTestArray[4].question}}</p>
+
+            <mat-radio-group formControlName = "q5Ans">
+                <mat-radio-button value="Q5A">{{disTestArray[4].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q5B">{{disTestArray[4].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q5C">{{disTestArray[4].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q5D">{{disTestArray[4].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+        </div>
+        <div>
+
+            <p>{{disTestArray[5].qNumber}}  {{disTestArray[5].question}}</p>
+
+            <mat-radio-group formControlName = "q6Ans">
+                <mat-radio-button value="Q6A">{{disTestArray[5].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q6B">{{disTestArray[5].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q6C">{{disTestArray[5].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q6D">{{disTestArray[5].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+        </div>
+        <div>
+            <p>{{disTestArray[6].qNumber}}  {{disTestArray[6].question}}</p>
+
+            <mat-radio-group formControlName = "q7Ans">
+                <mat-radio-button value="Q7A">{{disTestArray[6].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q7B">{{disTestArray[6].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q7C">{{disTestArray[6].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q7D">{{disTestArray[6].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+            <br>
+
+        </div>
+        <div>
+            <p>{{disTestArray[7].qNumber}}  {{disTestArray[7].question}}</p>
+
+            <mat-radio-group formControlName = "q8Ans">
+                <mat-radio-button value="Q8A">{{disTestArray[7].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q8B">{{disTestArray[7].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q8C">{{disTestArray[7].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q8D">{{disTestArray[7].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+        
+            <br>
+        </div>
+        <div>
+            <p>{{disTestArray[8].qNumber}}  {{disTestArray[8].question}}</p>
+
+            <mat-radio-group formControlName = "q9Ans">
+                <mat-radio-button value="Q9A">{{disTestArray[8].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q9B">{{disTestArray[8].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q9C">{{disTestArray[8].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q9D">{{disTestArray[8].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+       
+            <br>
+        </div>
+        <div>
+            <p>{{disTestArray[9].qNumber}}  {{disTestArray[9].question}}</p>
+
+            <mat-radio-group formControlName = "q10Ans">
+                <mat-radio-button value="Q10A" >{{disTestArray[9].AnsA}}</mat-radio-button> <br>
+                <mat-radio-button value="Q10B">{{disTestArray[9].AnsB}}</mat-radio-button> <br>
+                <mat-radio-button value="Q10C">{{disTestArray[9].AnsC}}</mat-radio-button> <br>
+                <mat-radio-button value="Q10D">{{disTestArray[9].AnsD}}</mat-radio-button> <br>
+            </mat-radio-group>
+        
+            <br>
+        </div>
+            <br/>
+
+            <button mat-raised-button color="primary"  (click)= "submitQuiz()" >Submit</button> <br> <br/>
+        
+    </form>
+   
+</div>
