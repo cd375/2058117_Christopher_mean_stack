@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Chatting with SocketIO</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        .border{
+            height: auto;
+            width: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Dr.Sleep Questionare</h1>
+        <br>
+        <p class="lead">Please answer a few questions....</p>
+        <div class=" border border-dark px-3 rounded" id="chat" >
+        
+        </div>
+        <div>
+            <form action=""  >
+                <input type="text" name="msg" id="msg">
+                <input type="submit" value="Send Message" id="send">
+                <input type="reset" value="Clear">
+            </form>
+        </div>
+    </div>
+    <script>
+        //cBox = document.getElementById("chat")
+        roboMsg = ""
+        test = ""
+        chatTalk2 = "";
+        innerChatBox= document.getElementById("chat").innerText
+        console.log("this is inner"+innerChatBox)
+
+
+        
+
+        
+        var socket = io()
+        
+        socket.on("giveChat",(roboMsg)=>{
+            console.log(roboMsg)
+            rowDiv = myDiv = document.createElement("div")
+            rowDiv.className = "row"
+
+
+             myDiv = document.createElement("div")
+             myDiv.className = "col-6 my-3 bg-secondary text-white rounded"
+
+             myDiv.innerText=roboMsg
+           // myText = document.createTextNode(roboMsg)
+            areaChat = document.getElementById("chat")
+
+            rowDiv.appendChild(myDiv)
+
+            areaChat.appendChild(rowDiv)
+            
+            //document.getElementById("chat").innerText=roboMsg
+        })
+        
+
+        let userChat= (ev)=>{
+           ev.preventDefault()
+
+           if(document.getElementById("msg").value!== ""){
+               
+
+                chatTalk2 = document.getElementById("msg").value
+                console.log("this is the users input "+ chatTalk2)
+                socket.emit("getChatMore",chatTalk2)
+                
+                newRowDiv = myDiv = document.createElement("div")
+                newRowDiv.className = "row "
+
+                myNewDiv = document.createElement("div")
+                myNewDiv.className = "col-4 offset-8  bg-primary text-white rounded"
+
+                myNewDiv.innerText=chatTalk2
+                newAreaChat = document.getElementById("chat")
+                
+                newRowDiv.appendChild(myNewDiv)
+                newAreaChat.appendChild(newRowDiv)
+            }else{
+               console.log("if is null")
+               alert("this is null enter meesage")
+           }
+           document.querySelector("form").reset()
+        }
+
+        if(document.getElementById("send")!=null){
+            document.addEventListener("DOMContentLoaded",()=>{
+                document.getElementById("send").addEventListener("click",userChat)
+            })
+        }
+    </script>
+</body>
+</html>
