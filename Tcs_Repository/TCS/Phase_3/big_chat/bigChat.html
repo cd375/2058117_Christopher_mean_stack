@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Chat home</title>
+</head>
+<body>
+    <div>
+        <h1>Chat with me</h1>
+        <form id="myChat">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+
+            <br>
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message">
+            <br>
+
+            <input type="submit" value="Send to Data Base" id="send">
+            <input type="reset" value="Clear">
+            
+        </form>
+    </div>
+    
+    <script>
+        var socket = io()
+
+        let getMsg = (ev)=>{
+            ev.preventDefault()
+            if(document.getElementById("name").value != "" && document.getElementById("message").value !=""){
+                let userName = document.getElementById("name").value
+                let userMsg = document.getElementById("message").value
+               
+                let objUser = {name:userName,message:userMsg}
+                socket.emit("bigChatMsg",objUser)
+            }else{
+                alert("please enter a name and/or message")
+            }
+            document.getElementById("myChat").reset()
+        }
+
+        if(document.getElementById("send") != null){
+            document.addEventListener("DOMContentLoaded",()=>{
+                document.getElementById("send").addEventListener("click",getMsg)
+            })
+        }
+    </script>
+</body>
+</html>
