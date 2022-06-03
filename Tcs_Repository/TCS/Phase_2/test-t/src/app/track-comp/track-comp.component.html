@@ -1,0 +1,62 @@
+<div>
+    <h1>Task Tracker</h1>
+</div>
+<div>
+    <h2>To-Do-Task</h2>
+    <form [formGroup]= "toDoFrm" >
+        <div>
+            <label for="emp-id">Id</label>
+        </div>
+        <div>
+            <input type="text" name="emp-id" id="emp-id" formControlName = "eID">
+        </div>
+        <div>
+            <label for="name">Name</label>
+        </div>
+        <div>
+            <input type="text" name="name" id="name" formControlName = "name">
+        </div>
+        <div>
+            <label for="task">Task</label>
+        </div>
+        <div>
+            <textarea name="task" id="task" cols="30" rows="10" formControlName = "task"></textarea>
+        </div>
+        <div>
+            <label for="dead-line">Dead Line</label>
+        </div>
+        <div>
+            <input type="date" name="dead-line" id="dead-line" formControlName = "dLine">
+        </div>
+        <div>
+            <input type="button" value="submit"(click)="setInfo()" >
+        </div>
+        <div>
+           <input type="reset" value="Reset">
+        </div>
+    </form>
+</div>
+{{testMSG}}
+<br>
+{{paramID}}
+<div>
+    <table>
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Task</th>
+            <th>Dead Line</th>
+        </tr>
+        <tr *ngFor = "let test of newSetTasks"><!--this will hav a for loop-->
+            <td>{{test.oID}}</td>
+            <td>{{test.oName}}</td>
+            <td>{{test.oTask}}</td>
+            <td>{{test.oLine}}</td>
+        </tr>
+    </table>
+   
+</div>
+
+
+
+

@@ -1,0 +1,10 @@
+/* this is the style page for both pages*/
+.img-fluid{
+    width: 50%;
+    height: 66.66;
+   /*  max-height: 100% */
+}
+.col-6 {
+    margin:auto;
+
+}

@@ -1,0 +1,10 @@
+//inport functions
+//import {Clothes} from "./cart_fun"
+//import {isRedShirt} from "./shop_page"
+//this will be the desplay page
+//import classes, interface, and abstract function
+//i may be using the singleton design patter look at video again
+// remember solid if i have time
+//this page will be for displaying content
+var page = "\n<div class=\"container-fluid\">\n<header class=\"header\">\n    <nav class=\"navbar navbar-light bg-dark text-light\">\n\n        <a class=\"navbar-brand\" href=\"#\"><h1 class=\"display-3 text-light\">myShoppingSite</h1></a>\n        <ul class=\"nav nav-pills\">\n            \n            <li class=\"navbar-item active nav-pills \">\n                <a href=\"shopping.html\" class=\"nav-link\">Continue Shopping</a>\n            </li>\n        </ul>\n    </nav>\n    \n</header>\n<div class=\"title\">\n    <h2 class=\"display1\">Shoping cart Check out</h2>\n</div>\n<div>\n    <table class=\"table table-striped\" id=\"table\">\n        <tr class=\"thead-dark\">\n            <th>Item Name</th>\n            <th>Price</th>\n        </tr>\n        <tr>\n            <td class=\"lead\">name of poduct</td>\n            <td class=\"lead\">price of product as number</td>\n        </tr>\n        <tr>\n            <td class=\"lead\">total price</td>\n            <td class=\"lead\">total price as number</td>\n        </tr>\n    </table>\n</div>\n</div>\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n</body>\n</html>\n\n";
+document.write(page);

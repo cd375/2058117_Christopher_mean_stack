@@ -18,6 +18,7 @@ let http = require("http").Server(app)
 let io = require('socket.io')(http)
 
 roboTalk = "How are you feeling? Please enter a number between 1-10"
+tst = "test me"
 
 app.get("/", (request,response)=>{
     response.sendFile(__dirname+"\\index.html")
@@ -31,6 +32,7 @@ io.on("connection",(socket)=>{
     socket.emit("giveChat",roboTalk)
     socket.on("getChatMore",(chatMe)=>{
         console.log("this is chat me "+ chatMe)
+        socket.emit("testMe",tst)
         
         if (parseInt(chatMe)>=1 && parseInt(chatMe)<=10){
             if (parseInt(chatMe)<=5){

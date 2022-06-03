@@ -20,6 +20,7 @@
         <h1>Dr.Sleep Questionare</h1>
         <br>
         <p class="lead">Please answer a few questions....</p>
+        <textarea name="test" id="test" cols="30" rows="10"></textarea>
         <div class=" border border-dark px-3 rounded" id="chat" >
         
         </div>
@@ -44,6 +45,10 @@
 
         
         var socket = io()
+        socket.on("test",(tst)=>{
+            let t = document.createTextNode(tst)
+            let testME = document.getElementById("test").innerText = t
+        })
         
         socket.on("giveChat",(roboMsg)=>{
             console.log(roboMsg)

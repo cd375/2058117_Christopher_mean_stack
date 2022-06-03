@@ -107,18 +107,18 @@ db.once("open",()=>{
         fetchModel.find({},(err,result)=>{
             if(!err){
                 console.log("this is find result ..."+result)
-                
-                for(let doc of result){
-                    tableRow = tableRow + `
-                    <tr>
-                        <td>${doc.cID}</td>
-                        <td>${doc.cName}</td>
-                        <td>${doc.description}</td>
-                        <td>${doc.amount}</td>
-                    </tr>
-                    `
+                if(tableRow == ""){
+                    for(let doc of result){
+                        tableRow = tableRow + `
+                        <tr>
+                            <td>${doc.cID}</td>
+                            <td>${doc.cName}</td>
+                            <td>${doc.description}</td>
+                            <td>${doc.amount}</td>
+                        </tr>
+                        `
+                    }
                 }
-
                 console.log("tableRow......"+ tableRow)
                 response.send(`
                 <!DOCTYPE html>
@@ -145,7 +145,7 @@ db.once("open",()=>{
                 </body>
                 </html>
                 `)
-
+                tableRow = "";
             }else{
                 console.log("this is find err..."+err)
             }
